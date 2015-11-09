@@ -19,37 +19,9 @@ $error = $_GET['error'];
 </head>
 
 <body>
-<div class="container">
-    <div class="header clearfix">
-      <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" ><a "#">Home</a></li>
-		  </ul>
-	  </nav>
-	</div>
-	
-<div class="container">
-    
-    
-        <?php
-        if(isset($_GET['error'])){
-        print "<font color='red' size='2'>".$error."</font><br><br>";
-        }
-        require 'vendor/autoload.php';
-        $rds = new Aws\Rds\RdsClient([
-    'version' => 'latest',
-    'region'  => 'us-east-1'
-]);
-$result = $rds->describeDBInstances([
-    'DBInstanceIdentifier' => 'mh-db',
-]);
-//echo $result['DBInstances'][0]['DBInstanceStatus'];
-if ($result['DBInstances'][0]['DBInstanceStatus'] != "available"){
-echo '<div class="jumbotron">';
-    echo ' <h2> Wait till the Database is created... </h2></div>';
-}
-$result = $rds->waitUntil('DBInstanceAvailable',['DBInstanceIdentifier' => 'mh-db',]);
- ?>
+
+<h1>Welcome to Elton PHP website submission of User Info and Images.</h1>
+
 <form enctype="multipart/form-data" action="submit.php" method="POST">    
     
 	<label >User Name:</label>
