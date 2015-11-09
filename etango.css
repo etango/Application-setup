@@ -2,3 +2,7 @@ body{
 	margin-left: 5px;
 	font-family: Arial;
 }
+
+form {
+	text-align: center;
+}
