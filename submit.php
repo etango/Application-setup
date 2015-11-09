@@ -85,12 +85,12 @@ $uname = $_POST['uname'];
 $email = $_POST['email'];
 $_SESSION["email"] = $email;
 $phone  = $_POST['phone'];
-$s3url = $url; //  $result['ObjectURL']; from above
+$S3url = $url; //  $result['ObjectURL']; from above
 $jpgfilename = basename($_FILES['file']['name']);
 $state= "none";
 $status =0;
 $date = date("d M Y - h:i:s A");
-$stmt->bind_param("ssssssis",$uname,$email,$phone,$s3url,$fs3url,$filename,$status,$date);
+$stmt->bind_param("ssssssis",$uname,$email,$phone,$S3url,$FS3url,$filename,$status,$date);
 if (!$stmt->execute()) {
     echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
 }
