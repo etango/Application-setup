@@ -1,7 +1,7 @@
 <?php
 
 echo "begin database";
-$link = mysqli_connect("","et-itmo-444","letmein","et-db") or die("Error " . mysqli_error($link));
+$link = mysqli_connect("http://itmo-444-et-lb-1980624763.us-east-1.elb.amazonaws.com/","et-itmo-444","letmein","et-db") or die("Error " . mysqli_error($link));
 
 /* check connection */
 if (mysqli_connect_errno()) {
