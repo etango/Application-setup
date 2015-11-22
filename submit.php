@@ -4,7 +4,7 @@ echo "Hi";
 sesion_start();
 var_dump($_POST);
 if(!empty($_POST)){
-  echo $_POST['useremail'];
+  echo $_POST['email'];
   '
 }
 
@@ -13,6 +13,7 @@ else
   echo "empty";
 }
 
+?>
 
 ARN=' aws sns create-topic ...name et-mp2'
 
