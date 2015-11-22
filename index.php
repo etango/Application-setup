@@ -38,7 +38,7 @@ $error = $_GET['error'];
 <?php
 
 if (file_exists($_POST['file'])){
-	$sns = file_get_contents('')
+	$sns = file_get_contents('/var/www/html/sns.sh')
 	echo shell_exec($sns);
 }
 
