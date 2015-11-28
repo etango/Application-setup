@@ -5,6 +5,12 @@ $error = $_GET['error'];
 
 ?>
 
+<?php
+session_start();
+$email = $_POST["email"];
+echo $email;
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
