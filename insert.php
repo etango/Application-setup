@@ -1,3 +1,14 @@
+
+<?php
+session_start();
+if (!isset($_SESSION['count'])) {
+  $_SESSION['count'] = 0;
+} else {
+  $_SESSION['count']++;
+}
+?>
+
+
 <?php
 
 echo "begin database";
@@ -20,8 +31,8 @@ if (!($stmt = $link->prepare("INSERT INTO student (id, name, age) VALUES (NULL,?
 }
 
 $id = 1;
-$name = "joe";
-$age = 55;
+$name = "Elton";
+$age = 22;
 
 $stmt->bind_param("si",$name,$age);
 
