@@ -9,7 +9,8 @@ $error = $_GET['error'];
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="./etango.css" rel="stylesheet">
+	<link type="text/css" href="./etango.css" rel="stylesheet">
+	<link type="text/css" href="./template.css" rel="stylesheet">
 </head>
 
 <body>
