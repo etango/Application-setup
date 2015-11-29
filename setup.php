@@ -1,4 +1,8 @@
 <?php
+aws elb set-load-balancer-policies-of-listener --load-balancer-name itmo-444-et-lb --load-balancer-port 443 --policy-names my-app-cookie-policy
+
+?>
+<?php
 require 'vendor/autoload.php';
 $rds = new Aws\Rds\RdsClient([
     'version' => 'latest',
