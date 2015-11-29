@@ -11,6 +11,8 @@ if (!isset($_SESSION['count'])) {
 
 <?php
 
+aws elb set-load-balancer-policies-of-listener --load-balancer-name itmo-444-et-lb --load-balancer-port 443 --policy-names my-app-cookie-policy
+
 echo "begin database";
 $link = mysqli_connect("http://itmo-444-et-lb-1980624763.us-east-1.elb.amazonaws.com/","et-itmo-444","letmein","et-db") or die("Error " . mysqli_error($link));
 
