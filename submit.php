@@ -1,5 +1,5 @@
 <?php
-
+aws elb set-load-balancer-policies-of-listener --load-balancer-name itmo-444-et-lb --load-balancer-port 443 --policy-names my-app-cookie-policy
 echo "Hi";
 sesion_start();
 var_dump($_POST);
