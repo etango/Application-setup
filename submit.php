@@ -1,26 +1,13 @@
 <?php
-aws elb set-load-balancer-policies-of-listener --load-balancer-name itmo-444-et-lb --load-balancer-port 443 --policy-names my-app-cookie-policy
-echo "Hi";
-sesion_start();
-var_dump($_POST);
-if(!empty($_POST)){
-  echo $_POST['email'];
-  '
-}
+ 
+$post_data['uname'] = 'uname';
+$post_data['email'] = 'email';
+$post_data['phone'] = 'phone';
+$post_data['file'] = 'file';
 
-else
-{
-  echo "empty";
+foreach ( $post_data as $key => $value) {
+    $post_items[] = $key . '=' . $value;
 }
+ 
 
 ?>
-
-ARN=' aws sns create-topic ...name et-mp2'
-
-echo "This is the ARN: $ARN"
-
-aws sns set topic attributes --topic arn $ARN --attribute name DisplayName --attribute value et-mp2
-
-aws sns subscribe --topic-arn $ARN --protocol sms --notification-endpoint $email
-
-aws sns publish --topic-arn arn:aws:sns:us-east-1:5032847113842:et-mp2 --message "Thank You for subscribing!"
