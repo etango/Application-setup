@@ -35,10 +35,12 @@ echo $email;
 	<label >Phone :</label>
 	<input class="form-control" type="phone" name="phone" value="<?php ($_POST['phone']) ? $_POST['phone'] : '' ?>"></input>
 	<br/>
+</form>
+<form enctype="multipart/form-data" action="gallery.php" method="POST">
 	<label >File to send:</label>
 	<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
 	<input  type="file" name="file" value="<?php ($_POST['file']) ? $_POST['file'] : '' ?>"></input><br><br>
-	<button type="submit">Send File</button>
+	<button type="submit" value="Load Gallery">Send File</button>
 	<input type="hidden" name="submit"/>
 	<br/>
 </form>
