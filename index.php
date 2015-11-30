@@ -58,6 +58,18 @@ else {
 ?>
 
 
+<?php
+<?php
+/* Read the image */
+$im = new imagick( "test.png" );
+/* create the thumbnail */
+$im->cropThumbnailImage( 80, 80 );
+/* Write to a file */
+$im->writeImage( "th_80x80_test.png" );
+?>
+
+?>
+
 </div>
 </body>
 </html>
